@@ -1,0 +1,60 @@
+form {
+	width: 50rem;
+	margin-top: 4rem;
+	padding: 2rem;
+	border-radius: 1rem;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	box-shadow: 0 0 1rem rgba(0, 0, 0, 0.2);
+}
+
+form h2 {
+	font-size: 2rem;
+	color: var(--primary-color);
+	text-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.2);
+	margin-bottom: 1rem;
+}
+form p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+}
+
+.input-group {
+	width: 100%;
+	margin-bottom: 2rem;
+
+	display: flex;
+	justify-content: center;
+	align-items: start;
+}
+
+.input-group label {
+	width: 20%;
+	font-weight: 500;
+	font-size: 1.4rem;
+}
+
+.input-group textarea,
+.input-group input {
+	width: 80%;
+	outline: none;
+	padding: 0.5rem 1rem;
+}
+
+@media (max-width: 480px) {
+	form {
+		width: 100%;
+		border-radius: 0;
+	}
+
+	.input-group {
+		display: flex;
+		flex-direction: column;
+	}
+	.input-group input,
+	.input-group textarea {
+		width: 100%;
+	}
+}

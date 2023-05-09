@@ -1,0 +1,283 @@
+/* header*/
+header {
+    z-index: 1000000000000000000000;
+    width: 100%;
+    height: 8rem;
+    padding: 1rem 2rem;
+
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    background-color: var(--primary-color);
+
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
+}
+
+
+/* navbar */
+header nav {
+    width: 70%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+header nav ul {
+    width: 100%;
+
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+header nav ul li {
+    width: 10rem;
+
+    text-align: center;
+    font-size: 1.6rem;
+    font-weight: 450;
+    letter-spacing: 0.1rem;
+
+    transition: all 0.2s ease;
+
+    position: relative;
+}
+
+header nav ul li:hover {
+    transform: scale(1.1);
+}
+
+header nav ul li:hover::after {
+    content: '';
+    position: absolute;
+    bottom: -0.5rem;
+    left: 0;
+
+    width: 10rem;
+    height: 2px;
+
+    background-color: var(--secondary-color);
+}
+
+header nav ul li a {
+    color: var(--text-900);
+}
+
+header nav ul li:hover a {
+    color: var(--text-50);
+}
+
+/* icons */
+header .icons {
+    width: 20%;
+
+    display: flex;
+    justify-content: end;
+    align-items: center;
+}
+
+header .icons i {
+    width: 3.5rem;
+    height: 3.5rem;
+    border-radius: 50%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-size: 2rem;
+    margin-left: 4rem;
+
+    color: var(--text-700);
+
+    cursor: pointer;
+
+    transition: all 0.2s linear;
+    position: relative;
+}
+
+header .icons i:hover {
+    background-color: var(--secondary-color);
+    color: var(--text-50);
+
+    transform:scale(1.1);
+}
+
+#search {
+    position: relative;
+}
+
+.pop-up {
+    position: absolute;
+    top: 7rem;
+    right: 17rem;
+    padding: 1rem 2rem;
+    border-radius: 1rem;
+    width: 24rem;
+    min-height: 5rem;
+
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    font-size: 1.4rem;
+    font-weight: 400;
+
+    color: var(--text-900);
+    background: var(--text-100);
+    box-shadow: 4px 4px 1rem rgba(0, 0, 0, 0.2);
+}
+.pop-up::after {
+    content: '';
+    position: absolute;
+    top: -2rem;
+    right: 1rem;
+    height: 1rem;
+    border-left: 0.8rem solid transparent;
+    border-right: 0.8rem solid transparent;
+    border-bottom: 1rem solid var(--text-100);
+}
+.pop-up.active {
+    display: flex;
+}
+.pop-up input {
+    outline: none;
+    width: 100%;
+    margin-bottom: 1rem;
+    padding: 0.2rem 1rem;
+}
+.search-item {
+    display: flex;
+    width: 100%;
+    margin-bottom: 1rem;
+    border-radius: 0.5rem;
+
+    overflow: hidden;
+
+    color: var(--text-900);
+    background-color: var(--text-50);
+    box-shadow: 0 0 1rem rgba(0, 0, 0, 0.2);
+}
+.search-item:hover {
+    transform: scale(1.02);
+}
+.search-item img {
+    width: 6rem;
+    height: 5rem;
+    display: block;
+}
+
+#card-num {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 1.5rem;
+    height: 1.5rem;
+    border-radius: 50%;
+    background-color: var(--secondary-color);
+    font-size: 1rem;
+    color: var(--text-50);
+    text-align: center;
+    line-height: 1.5rem;
+    font-weight: 300;
+}
+
+header .icons i:hover #card-num {
+    display: none;
+}
+
+#bars {
+    display: none;
+}
+
+main {
+    margin-top: 8rem;
+}
+
+
+
+/* responsive */
+@media (max-width: 1024px) and (min-width: 769px) {
+    header nav {
+        width: 100%;
+        height: 6rem;
+
+        position: absolute;
+        top: 8rem;
+        right: 0;
+
+        background: var(--text-100);
+        box-shadow: 0 0 1rem rgba(0, 0, 0, 0.15);
+    }
+
+    header .icons {
+        width: 50%;
+    }
+
+    main {
+        margin-top: 14rem;
+    }
+}
+
+@media (max-width: 768px) {
+    header nav {
+        width: 20rem;
+        height: calc(100vh - 8rem);
+        padding: 2rem 2rem;
+
+        background-color: var(--text-100);
+
+        position: absolute;
+        top: 8rem;
+        right: 0;
+
+        display: none;
+    }
+
+    header nav.active {
+        display: block;
+    }
+
+    header nav ul {
+        flex-direction: column;
+        justify-content: start;
+        align-items: center;
+    }
+
+    header nav ul li {
+        text-align: start;
+        margin-bottom: 3rem;
+    }
+
+    header .icons i {
+        margin-left: 1rem;
+    }
+
+    #bars {
+        display: flex;
+    }
+
+    .pop-up {
+        right: 15.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    header nav {
+        width: 100%;
+    }
+    .pop-up {
+        width: 100%;
+        right: 0;
+    }
+    .pop-up::after {
+        display: none;
+    }
+}

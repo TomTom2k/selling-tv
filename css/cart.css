@@ -1,0 +1,217 @@
+
+.cart {
+    padding: 4rem;
+    width: 100%;
+}
+.list-product {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 4rem;
+}
+.product {
+    overflow: hidden;
+    width: 100%;
+    border-radius: 1rem;
+    padding: 2rem;
+    margin-bottom: 4rem;
+    display: flex;
+    box-shadow: 4px 4px 0.5rem rgba(0,0,0,0.2);
+    position: relative;
+    cursor: pointer;
+}
+.product .remove {
+    display: none;
+    position: absolute;
+    justify-content: center;
+    align-items: center;
+    color: var(--text-50);
+    font-weight: 900;
+    font-size: 1.4rem;
+    top: 0;
+    left: 0;
+    width: 3rem;
+    height: 100%;
+    background: var(--secondary-color);
+}
+.product:hover .remove {
+    display: flex;
+}
+.product .remove:hover {
+    opacity: 0.6;
+}
+.product:hover {
+    box-shadow: 4px 4px 1rem var(--primary-color);
+}
+.product .image {
+    width: 15rem;
+    height: 15rem;
+    border-radius: 0.5rem;
+    overflow: hidden;
+}
+.product .image img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+    box-shadow: 4px 4px 1rem rgba(0, 0, 0, 0.2);
+}
+.product .info {
+    width: calc(100% - 25rem);
+    padding: 0 2rem;
+}
+.product .info .name {
+    font-size: 1.8rem;
+    font-weight: 500;
+    text-transform: uppercase;
+
+    margin-bottom: 1rem;
+}
+.product .info .price,
+.product .info .amount {
+    font-size: 1.4rem;
+    margin-bottom: 1rem;
+}
+.product .info .price span {
+    color: var(--secondary-color);
+}
+.product .info .price span,
+.product .info .amount span {
+    margin-left: 1rem;
+}
+.product .total {
+    background-color: var(--text-100);
+    margin: -2rem;
+    padding: 1rem;
+    width: 15rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.product.choice .total {
+    background-color: var(--primary-color);
+}
+.product .total p {
+    font-size: 1.6rem;
+    font-weight: 600;
+    color: var(--text-700);
+    text-shadow: 0 0 1rem rgba(0,0,0,0.2);
+}
+.product.choice .total p {
+    color: var(--text-50);
+}
+.buy {
+    width: 100%;
+    padding: 2rem;
+    margin-top: 6rem;
+    border: 1px solid var(--text-900);
+
+    display: flex;
+}
+
+.info-payment {
+    width: calc(100% - 20rem);
+}
+
+.info-payment ul a{
+    cursor: pointer;
+    padding: 1.5rem 2rem;
+    font-size: 1.8rem;
+    color: var(--text-900);
+    display: grid;
+    grid-template-columns: 1fr 4rem;
+    border-bottom: 1px solid var(--text-900);
+}
+
+.info-payment ul a:hover {
+    color: var(--text-700);
+    font-weight: 500;
+}
+
+.buy-btn {
+    width: 20rem;
+    padding: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border-left: 1px solid var(--text-900);
+}
+
+#total {
+    margin-bottom: 2rem;
+    font-size: 1.8rem;
+    color: var(--text-900);
+}
+
+
+
+
+
+
+
+/* responsive */
+@media (max-width: 1024px) and (min-width: 769px) {
+    .product .info {
+        width: calc(100% - 15rem);
+    }
+    .product .total {
+        width: 10rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .list-product {
+        grid-template-columns: 1fr;
+    }
+    .product .info {
+        width: calc(100% - 15rem);
+    }
+    .product .total {
+        width: 10rem;
+    }
+    .product .total p {
+        font-size: 1.4rem;
+    }
+    .info-payment {
+        width: calc(100% - 15rem);
+    }
+    .buy-btn {
+        width: 15rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .product {
+        flex-wrap: wrap;
+    }
+    .product .info .name {
+        font-size: 1.4rem;
+        margin-bottom: 0.5rem;
+    }
+    .product .info .price,
+    .product .info .amount {
+        font-size: 1.2rem;
+        margin-bottom: 0.5rem;
+    }
+    .product .info .price span,
+    .product .info .amount span {
+        margin-left: 0.5rem;
+    }
+    .product .total {
+        width: calc(100% + 4rem);
+        margin-top: 0rem;
+    }
+    .buy  {
+        flex-direction: column;
+    }
+    .info-payment {
+        width: 100%;
+    }
+    .info-payment ul a {
+        font-size: 1.4rem;
+    }
+    .buy-btn {
+        width: 100%;
+        border: none;
+    }
+}

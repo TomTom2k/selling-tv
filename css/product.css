@@ -1,0 +1,126 @@
+main {
+    min-height: calc(100vh - 30rem);
+}
+.info-cake {
+    margin-top: 2rem;
+    display: flex;
+    justify-content: start;
+    align-items: stretch;
+}
+
+.info-cake .l-info {
+    width: 40rem;
+    height: 35rem;
+    overflow: hidden;
+}
+
+.info-cake .l-info img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.info-cake .r-info {
+    padding: 2rem;
+}
+
+.info-cake .r-info .name {
+    font-size: 2.2rem;
+    letter-spacing: 1px;
+    text-transform: capitalize;
+    color: var(--text-900);
+    margin-bottom: 0.5rem;
+}
+
+.info-cake .r-info #price {
+    font-size: 1.6rem;
+    font-weight: 500;
+    display: flex;
+    margin-bottom: 1rem;
+}
+
+.info-cake .r-info #price p {
+    margin-right: 1rem;
+}
+
+.info-cake .r-info #price .new {
+    color: var(--secondary-color);
+}
+
+.info-cake .r-info #category {
+    margin-bottom: 0.5rem;
+    font-size: 1.5rem;
+    font-weight: 500;
+}
+
+.info-cake .r-info #category span {
+    font-size: 0.8rem;
+    background-color: #dfdfdf;
+    padding: 0.5rem 1rem;
+    border-radius: 1rem;
+}
+
+.info-cake .r-info .input-group {
+    margin: 1rem 0;
+}
+
+.info-cake .r-info .input-group label {
+    font-size: 1.3rem;
+    font-weight: 500;
+    margin-right: 1rem;
+}
+
+.info-cake .r-info .input-group input {
+    padding: 0.5rem 1rem;
+    outline: none;
+    width: 7rem;
+}
+
+.info-cake .r-info .button-group {
+    margin-top: 3rem;
+}
+
+.info-cake .r-info .button-group button:first-child {
+    margin-right: 1rem;
+}
+
+.more-info-cake {
+    padding: 2rem 2rem;
+}
+.more-info-cake b {
+    font-size: 1.4rem;
+    color: var(--text-900);
+    margin-right: 1rem;
+}
+.more-info-cake span {
+    font-size: 1.2rem;
+    color: var(--text-700);
+}
+.more-info-cake .ingredient {
+    margin-bottom: 1rem;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media (max-width: 1024px) and (min-width: 769px) {
+}
+@media (max-width: 768px) {
+    .info-cake {
+        flex-direction: column;
+    }
+    .info-cake .l-info {
+        width: 100%;
+    }
+}
+
+@media (max-width: 480px) {}

@@ -1,0 +1,162 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: 'Poppins', sans-serif;
+	text-decoration: none;
+	list-style: none;
+	user-select: none;
+}
+
+html {
+	font-size: 62.5%;
+}
+/* logo*/
+.logo {
+	padding: 1rem 2rem;
+
+	display: inline-block;
+
+	border-radius: 69% 31% 70% 30% / 43% 38% 62% 57%;
+
+	font-size: 2rem;
+	font-weight: 600;
+	color: var(--text-100);
+	letter-spacing: 0.1rem;
+
+	background-color: var(--third-color);
+
+	user-select: none;
+}
+
+.logo p {
+	line-height: 1.5rem;
+	text-shadow: 0 0 1rem rgba(0, 0, 0, 0.2);
+}
+
+.logo p span {
+	color: var(--secondary-color);
+	font-weight: 900;
+	font-size: 2.4rem;
+}
+
+/* all */
+main {
+	min-height: calc(100vh - 8rem);
+
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+button {
+	outline: none;
+
+	padding: 1rem 2rem;
+	border: none;
+	border-radius: 2rem;
+
+	background-color: var(--primary-color);
+	color: var(--text-50);
+	border: 2px solid var(--primary-color);
+
+	transition: all 0.2s linear;
+	cursor: pointer;
+}
+button:active {
+	opacity: 0.8;
+}
+button:hover {
+	border: 2px solid var(--primary-color);
+	color: var(--primary-color);
+	background: var(--text-50);
+	box-shadow: 0 0.5rem 2rem -0.5rem var(--primary-color);
+}
+
+button.btn-primary {
+	outline: none;
+	border: 2px solid var(--primary-color);
+	color: var(--primary-color);
+	background: var(--text-50);
+}
+
+button.btn-primary:hover {
+	background-color: var(--primary-color);
+	color: var(--text-50);
+}
+
+.container {
+	width: 100%;
+	max-width: 1024px;
+}
+.container-fluid {
+	width: 100%;
+}
+
+/* sale product css */
+.item {
+	flex: 0 1 30rem;
+	min-width: 30rem;
+	padding: 2rem;
+	border-radius: 1rem;
+
+	background: var(--text-50);
+	box-shadow: 0.5rem 0.5rem 0.5rem rgba(0, 0, 0, 0.1);
+	transition: all 0.2s linear;
+	position: relative;
+	z-index: 0;
+}
+.item:hover {
+	transform: scale(1.01);
+	box-shadow: 0.5rem 0.5rem 0.5rem rgba(0, 0, 0, 0.2);
+}
+.item img {
+	border-radius: 0.5rem;
+	width: 100%;
+	height: 20rem;
+	object-fit: container;
+	margin-bottom: 1rem;
+}
+.item .name {
+	font-size: 1.7rem;
+	color: var(--text-900);
+	text-overflow: ellipsis;
+	overflow: hidden;
+}
+.item .price {
+	font-size: 1.3rem;
+	font-weight: 500;
+	color: var(--secondary-color);
+}
+.old {
+	color: var(--secondary-color);
+}
+.item .tag {
+	position: absolute;
+	width: 6rem;
+	font-size: 1.4rem;
+	height: 3rem;
+	top: 1rem;
+	left: 0;
+	color: var(--text-50);
+	background-color: var(--secondary-color);
+	line-height: 3rem;
+	text-align: center;
+}
+
+/* responsive */
+@media (max-width: 1024px) and (min-width: 769px) {
+	.container {
+		max-width: 768px;
+	}
+}
+
+@media (max-width: 768px) {
+	.container {
+		max-width: 480px;
+	}
+}
+
+@media (max-width: 480px) {
+}

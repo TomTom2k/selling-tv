@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ĐĂNG NHẬP ĐỂ SỬ DỤNG CÁC DỊCH VỤ KHÁCH HÀNG CỦA JERRY CHERRY</title>
+
+    <!-- fontawesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+        integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link rel="stylesheet" href="../css/color.css">
+    <link rel="stylesheet" href="../css/style.css">
+
+    <link rel="stylesheet" href="../css/login-regis.css">
+</head>
+
+<body>
+
+    <main>
+        <img src="../images/wallpaper/backgroundLogin.jpg" alt="">
+        <form action="">
+            <h2>Đăng nhập</h2>
+            
+            <div class="input-group">
+                <label for="username">Tài khoản</label>
+                <input type="text" name="username" id="username" required>
+            </div>
+
+            <div class="input-group">
+                <label for="password">Mật khẩu</label>
+                <input type="password" name="password" id="pasword" required>
+            </div>
+            <div class="text-group">
+                <span id="error-message"></span>
+            </div>
+
+            <div class="button-group">
+                <button type="submit">Đăng nhập</button>
+            </div>
+
+            <div>
+                <p>Nếu chưa có tài khoản, <a href="./register.html">đăng kí</a> ngay</p>
+            </div>
+        </form>
+    </main>
+
+
+    <!-- javascrip file -->
+    <script src="../js/app.js" type="module"></script>
+
+    <script src="../js/login.js" type="module"></script>
+</body>
+
+</html>
